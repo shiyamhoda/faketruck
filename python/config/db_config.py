@@ -10,7 +10,7 @@ import os
 # Override any value with environment variables for CI/CD
 DB_CONFIG = {
     "staging": {
-        "server":   os.getenv("DB_SERVER",   "localhost"),
+        "server":   os.getenv("DB_SERVER",   "ShiyamsPersonal\SQLEXPRESS"),
         "database": os.getenv("DB_STAGING",  "AutoParts_Staging"),
         "driver":   "ODBC Driver 17 for SQL Server",
         "trusted":  True,   # Windows auth; set False for SQL auth
@@ -18,13 +18,13 @@ DB_CONFIG = {
         # "password": os.getenv("DB_PASS", ""),
     },
     "ods": {
-        "server":   os.getenv("DB_SERVER", "localhost"),
+        "server":   os.getenv("DB_SERVER", "ShiyamsPersonal\SQLEXPRESS"),
         "database": os.getenv("DB_ODS",    "AutoParts_ODS"),
         "driver":   "ODBC Driver 17 for SQL Server",
         "trusted":  True,
     },
     "warehouse": {
-        "server":   os.getenv("DB_SERVER", "localhost"),
+        "server":   os.getenv("DB_SERVER", "ShiyamsPersonal\SQLEXPRESS"),
         "database": os.getenv("DB_DW",     "AutoParts_DW"),
         "driver":   "ODBC Driver 17 for SQL Server",
         "trusted":  True,
