@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+*.egg-info/
+
+# Logs
+logs/
+
+# Power BI
+*.pbix         # keep .pbit templates, gitignore the binary .pbix
+*.pbix.lock
+
+# Secrets
+**/db_config_local.py
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
