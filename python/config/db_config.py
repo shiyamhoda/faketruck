@@ -1,6 +1,4 @@
 import os
-from sqlalchemy import create_engine
-from sqlalchemy.engine import URL
 
 DB_CONFIG = {
     "staging": {
@@ -26,6 +24,9 @@ DB_CONFIG = {
 
 def get_db_engine(layer: str):
     """Return a SQLAlchemy engine for the given layer."""
+
+    from sqlalchemy import create_engine
+    from sqlalchemy.engine import URL
 
     if layer not in DB_CONFIG:
         raise ValueError(f"Invalid layer: {layer}")

@@ -4,3 +4,116 @@
 2026-04-16 10:11:54 | INFO     | test.write | Sprint 1 smoke test log entry
 2026-04-16 10:26:28 | INFO     | test.write | Sprint 1 smoke test log entry
 2026-04-16 20:39:35 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 20:42:41 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 21:00:39 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 21:10:27 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:11:32 | INFO     | seed.orchestrator |  AutoParts Sprint 2 - Dimension Seed Run
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | Seeding DimDate...
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   DimDate FAILED: missing Python package 'sqlalchemy'
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   Install project dependencies with: pip install -r requirements.txt
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | Seeding DimProduct...
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   DimProduct FAILED: missing Python package 'sqlalchemy'
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   Install project dependencies with: pip install -r requirements.txt
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | Seeding DimCustomer...
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   DimCustomer FAILED: missing Python package 'sqlalchemy'
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   Install project dependencies with: pip install -r requirements.txt
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | Seeding DimStore...
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   DimStore FAILED: missing Python package 'sqlalchemy'
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   Install project dependencies with: pip install -r requirements.txt
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | Seeding DimSupplier...
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   DimSupplier FAILED: missing Python package 'sqlalchemy'
+2026-04-16 21:11:32 | ERROR    | seed.orchestrator |   Install project dependencies with: pip install -r requirements.txt
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:11:32 | INFO     | seed.orchestrator |  Summary
+2026-04-16 21:11:32 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:11:32 | INFO     | seed.orchestrator |   [FAIL] DimDate: 0 rows (0s)
+2026-04-16 21:11:32 | INFO     | seed.orchestrator |   [FAIL] DimProduct: 0 rows (0s)
+2026-04-16 21:11:32 | INFO     | seed.orchestrator |   [FAIL] DimCustomer: 0 rows (0s)
+2026-04-16 21:11:32 | INFO     | seed.orchestrator |   [FAIL] DimStore: 0 rows (0s)
+2026-04-16 21:11:32 | INFO     | seed.orchestrator |   [FAIL] DimSupplier: 0 rows (0s)
+2026-04-16 21:11:38 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 21:13:40 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:13:40 | INFO     | seed.orchestrator |  AutoParts Sprint 2 - Dimension Seed Run
+2026-04-16 21:13:40 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:13:40 | INFO     | seed.orchestrator | Seeding DimDate...
+2026-04-16 21:13:42 | INFO     | python.seed.seed_dim_date | Building date range 2020-01-01 to 2026-12-31...
+2026-04-16 21:13:43 | INFO     | python.seed.seed_dim_date | dim.DimDate seeded: 2557 rows.
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   DimDate: 2557 rows in 2.25s
+2026-04-16 21:13:43 | INFO     | seed.orchestrator | Seeding DimProduct...
+2026-04-16 21:13:43 | INFO     | python.seed.seed_dim_product | dim.DimProduct seeded: 40 rows.
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   DimProduct: 40 rows in 0.12s
+2026-04-16 21:13:43 | INFO     | seed.orchestrator | Seeding DimCustomer...
+2026-04-16 21:13:43 | INFO     | python.seed.seed_dim_customer | dim.DimCustomer seeded: 20 rows.
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   DimCustomer: 20 rows in 0.07s
+2026-04-16 21:13:43 | INFO     | seed.orchestrator | Seeding DimStore...
+2026-04-16 21:13:43 | INFO     | python.seed.seed_dim_store | dim.DimStore seeded: 12 rows.
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   DimStore: 12 rows in 0.05s
+2026-04-16 21:13:43 | INFO     | seed.orchestrator | Seeding DimSupplier...
+2026-04-16 21:13:43 | INFO     | python.seed.seed_dim_supplier | dim.DimSupplier seeded: 10 rows.
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   DimSupplier: 10 rows in 0.04s
+2026-04-16 21:13:43 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |  Summary
+2026-04-16 21:13:43 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   [OK] DimDate: 2557 rows (2.25s)
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   [OK] DimProduct: 40 rows (0.12s)
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   [OK] DimCustomer: 20 rows (0.07s)
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   [OK] DimStore: 12 rows (0.05s)
+2026-04-16 21:13:43 | INFO     | seed.orchestrator |   [OK] DimSupplier: 10 rows (0.04s)
+2026-04-16 21:14:04 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:14:04 | INFO     | seed.orchestrator |  AutoParts Sprint 2 - Dimension Seed Run
+2026-04-16 21:14:04 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:14:04 | INFO     | seed.orchestrator | Seeding DimDate...
+2026-04-16 21:14:05 | INFO     | python.seed.seed_dim_date | dim.DimDate already has 2557 rows - skipping seed.
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   DimDate: 2557 rows in 1.09s
+2026-04-16 21:14:05 | INFO     | seed.orchestrator | Seeding DimProduct...
+2026-04-16 21:14:05 | INFO     | python.seed.seed_dim_product | dim.DimProduct already has 40 rows - skipping.
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   DimProduct: 40 rows in 0.01s
+2026-04-16 21:14:05 | INFO     | seed.orchestrator | Seeding DimCustomer...
+2026-04-16 21:14:05 | INFO     | python.seed.seed_dim_customer | dim.DimCustomer already has 20 seed rows - skipping.
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   DimCustomer: 20 rows in 0.01s
+2026-04-16 21:14:05 | INFO     | seed.orchestrator | Seeding DimStore...
+2026-04-16 21:14:05 | INFO     | python.seed.seed_dim_store | dim.DimStore already has 12 rows - skipping.
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   DimStore: 12 rows in 0.01s
+2026-04-16 21:14:05 | INFO     | seed.orchestrator | Seeding DimSupplier...
+2026-04-16 21:14:05 | INFO     | python.seed.seed_dim_supplier | dim.DimSupplier already has 10 rows - skipping.
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   DimSupplier: 10 rows in 0.01s
+2026-04-16 21:14:05 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |  Summary
+2026-04-16 21:14:05 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   [OK] DimDate: 2557 rows (1.09s)
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   [OK] DimProduct: 40 rows (0.01s)
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   [OK] DimCustomer: 20 rows (0.01s)
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   [OK] DimStore: 12 rows (0.01s)
+2026-04-16 21:14:05 | INFO     | seed.orchestrator |   [OK] DimSupplier: 10 rows (0.01s)
+2026-04-16 21:23:28 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:23:28 | INFO     | seed.orchestrator |  AutoParts Sprint 2 - Dimension Seed Run
+2026-04-16 21:23:28 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:23:28 | INFO     | seed.orchestrator | Seeding DimDate...
+2026-04-16 21:23:30 | INFO     | python.seed.seed_dim_date | dim.DimDate already has 2557 rows - skipping seed.
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   DimDate: 2557 rows in 1.85s
+2026-04-16 21:23:30 | INFO     | seed.orchestrator | Seeding DimProduct...
+2026-04-16 21:23:30 | INFO     | python.seed.seed_dim_product | dim.DimProduct already has 40 rows - skipping.
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   DimProduct: 40 rows in 0.02s
+2026-04-16 21:23:30 | INFO     | seed.orchestrator | Seeding DimCustomer...
+2026-04-16 21:23:30 | INFO     | python.seed.seed_dim_customer | dim.DimCustomer already has 20 seed rows - skipping.
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   DimCustomer: 20 rows in 0.01s
+2026-04-16 21:23:30 | INFO     | seed.orchestrator | Seeding DimStore...
+2026-04-16 21:23:30 | INFO     | python.seed.seed_dim_store | dim.DimStore already has 12 rows - skipping.
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   DimStore: 12 rows in 0.05s
+2026-04-16 21:23:30 | INFO     | seed.orchestrator | Seeding DimSupplier...
+2026-04-16 21:23:30 | INFO     | python.seed.seed_dim_supplier | dim.DimSupplier already has 10 rows - skipping.
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   DimSupplier: 10 rows in 0.06s
+2026-04-16 21:23:30 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |  Summary
+2026-04-16 21:23:30 | INFO     | seed.orchestrator | ==================================================
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   [OK] DimDate: 2557 rows (1.85s)
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   [OK] DimProduct: 40 rows (0.02s)
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   [OK] DimCustomer: 20 rows (0.01s)
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   [OK] DimStore: 12 rows (0.05s)
+2026-04-16 21:23:30 | INFO     | seed.orchestrator |   [OK] DimSupplier: 10 rows (0.06s)
+2026-04-16 21:25:19 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 21:28:34 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 21:29:07 | INFO     | test.write | Sprint 1 smoke test log entry
+2026-04-16 21:46:34 | INFO     | __main__ | fact.FactSales seeded: 20 rows.
