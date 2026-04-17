@@ -1,50 +1,61 @@
-# ============================================================
-# AutoParts Data Platform
-# Module  : db_config.py
-# Purpose : Central database connection config
-# Sprint  : 1
-# ============================================================
-
 import os
+from sqlalchemy import create_engine
+from sqlalchemy.engine import URL
 
-# Override any value with environment variables for CI/CD
 DB_CONFIG = {
     "staging": {
-        "server":   os.getenv("DB_SERVER",   "ShiyamsPersonal\SQLEXPRESS"),
-        "database": os.getenv("DB_STAGING",  "AutoParts_Staging"),
-        "driver":   "ODBC Driver 17 for SQL Server",
-        "trusted":  True,   # Windows auth; set False for SQL auth
-        # "username": os.getenv("DB_USER", ""),
-        # "password": os.getenv("DB_PASS", ""),
+        "server": r"SHIYAMSPERSONAL\SQLEXPRESS",
+        "database": os.getenv("DB_STAGING", "AutoParts_Staging"),
+        "driver": "ODBC Driver 17 for SQL Server",
+        "trusted": True,
     },
     "ods": {
-        "server":   os.getenv("DB_SERVER", "ShiyamsPersonal\SQLEXPRESS"),
-        "database": os.getenv("DB_ODS",    "AutoParts_ODS"),
-        "driver":   "ODBC Driver 17 for SQL Server",
-        "trusted":  True,
+        "server": r"SHIYAMSPERSONAL\SQLEXPRESS",
+        "database": os.getenv("DB_ODS", "AutoParts_ODS"),
+        "driver": "ODBC Driver 17 for SQL Server",
+        "trusted": True,
     },
     "warehouse": {
-        "server":   os.getenv("DB_SERVER", "ShiyamsPersonal\SQLEXPRESS"),
-        "database": os.getenv("DB_DW",     "AutoParts_DW"),
-        "driver":   "ODBC Driver 17 for SQL Server",
-        "trusted":  True,
+        "server": r"SHIYAMSPERSONAL\SQLEXPRESS",
+        "database": os.getenv("DB_DW", "AutoParts_DW"),
+        "driver": "ODBC Driver 17 for SQL Server",
+        "trusted": True,
     },
 }
 
-def get_connection_string(layer: str) -> str:
-    """Return a pyodbc connection string for the given layer."""
+
+def get_db_engine(layer: str):
+    """Return a SQLAlchemy engine for the given layer."""
+
+    if layer not in DB_CONFIG:
+        raise ValueError(f"Invalid layer: {layer}")
+
     cfg = DB_CONFIG[layer]
+
+    # Base query params
+    query = {
+        "driver": cfg["driver"],
+        "TrustServerCertificate": "yes",
+    }
+
     if cfg["trusted"]:
-        return (
-            f"DRIVER={{{cfg['driver']}}};"
-            f"SERVER={cfg['server']};"
-            f"DATABASE={cfg['database']};"
-            "Trusted_Connection=yes;"
+        query["Trusted_Connection"] = "yes"
+
+        connection_url = URL.create(
+            "mssql+pyodbc",
+            host=cfg["server"],
+            database=cfg["database"],
+            query=query,
         )
-    return (
-        f"DRIVER={{{cfg['driver']}}};"
-        f"SERVER={cfg['server']};"
-        f"DATABASE={cfg['database']};"
-        f"UID={cfg['username']};"
-        f"PWD={cfg['password']};"
-    )
+
+    else:
+        connection_url = URL.create(
+            "mssql+pyodbc",
+            host=cfg["server"],
+            database=cfg["database"],
+            username=cfg["username"],
+            password=cfg["password"],
+            query=query,
+        )
+
+    return create_engine(connection_url)
